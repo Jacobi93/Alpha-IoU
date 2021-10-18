@@ -12,7 +12,9 @@ Example results on the test set of PASCAL VOC 2007 using YOLOv5s trained by the 
 </p>
 Example results on the val set of MS COCO 2017 using YOLOv5s trained by the vanilla IoU loss (top row) and the alpha-IoU loss with alpha=3 (bottom row). The alpha-IoU loss performs better than the vanilla IoU loss because it can localize objects more accurately (image 1), thus can detect more true positive objects (image 2 to 5) and fewer false positive objects (image 4 to 7). Note that image 4 and 5 detect both more true positive and fewer false positive objects.
 
-If you use this work, please consider citing:
+## Citation
+
+If you use our method, please consider citing:
 
 ```
 @inproceedings{Jiabo_Alpha-IoU,
