@@ -5,10 +5,12 @@ YOLOv5 with alpha-IoU losses implemented in PyTorch.
 <p align="center">
 <img src="example_voc.png" width="800">
 </p>
+Example results on the test set of PASCAL VOC 2007 using YOLOv5s trained by the vanilla IoU loss (top row) and the alpha-IoU loss with alpha=3 (bottom row). The alpha-IoU loss performs better than the vanilla IoU loss because it can localize objects more accurately (image 1 and 2), thus can detect more true positive objects (image 3 to 5) and fewer false positive objects (image 6 and 7).
 
 <p align="center">
 <img src="example_coco.png" width="800">
 </p>
+Example results on the val set of MS COCO 2017 using YOLOv5s trained by the vanilla IoU loss (top row) and $\mathcal{L}_{\alpha \textrm{-IoU}}$ with $\alpha=3$ (bottom row). $\mathcal{L}_{\alpha \textrm{-IoU}}$ performs better than the vanilla IoU loss because it can localize objects more accurately (image 1), thus can detect more true positive objects (image 2 to 5) and fewer false positive objects (image 4 to 7). Note that image 4 and 5 detect both more true positive and fewer false positive objects.
 
 If you use this work, please consider citing:
 
