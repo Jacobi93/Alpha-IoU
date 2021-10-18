@@ -2,6 +2,14 @@
 
 YOLOv5 with alpha-IoU losses implemented in PyTorch.
 
+<p align="center">
+<img src="example_voc.png" width="800">
+</p>
+
+<p align="center">
+<img src="example_coco.pn" width="800">
+</p>
+
 If you use this work, please consider citing:
 
 ```
