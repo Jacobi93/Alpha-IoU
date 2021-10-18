@@ -1,0 +1,24 @@
+train and test on VOC:
+
+python train.py --data voc.yaml --hyp hyp.scratch.yaml --cfg yolov5s.yaml --batch-size 64 --epochs 300 --device '0'
+python train.py --data voc25.yaml --hyp hyp.scratch.yaml --cfg yolov5s.yaml --batch-size 64 --epochs 300 --device '0'
+python train.py --data voc50.yaml --hyp hyp.scratch.yaml --cfg yolov5s.yaml --batch-size 64 --epochs 300 --device '0'
+
+python test.py --data voc.yaml --img 640 --conf 0.001 --weights 'runs/train/voc_all_iou/weights/best.pt' --device '0'
+
+
+
+train and test on COCO:
+
+python train.py --data coco.yaml --hyp hyp.scratch.yaml --cfg yolov5s.yaml --batch-size 64 --epochs 300 --device '0'
+python train.py --data coco.yaml --hyp hyp.scratch.yaml --cfg yolov5x.yaml --batch-size 64 --epochs 300
+
+python test.py --data coco.yaml --img 640 --conf 0.001 --weights 'yolov5s.pt'
+python test.py --data coco.yaml --img 640 --conf 0.001 --weights runs/train/coco_v5s_iou/weights/best.pt --device '0'
+
+
+
+detect:
+
+python detect.py --source ../VOC/images/detect500 --weights 'runs/train/voc_all_iou/weights/best.pt' --conf 0.25
+
