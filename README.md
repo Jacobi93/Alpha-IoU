@@ -5,7 +5,7 @@ YOLOv5 with $\alpha$-IoU losses implemented in PyTorch
 If you use this work, please consider citing:
 
 ```
-@article{Jiabo_Alpha-IoU,
+@inproceedings{Jiabo_Alpha-IoU,
   author    = {He, Jiabo and Erfani, Sarah and Ma, Xingjun and Bailey, James and Chi, Ying and Hua, Xian-Sheng},
   title     = {Alpha-IoU: A Family of Power Intersection over Union Losses for Bounding Box Regression},
   booktitle = {NeurIPS},
