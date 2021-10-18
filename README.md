@@ -25,7 +25,7 @@ If you use our method, please consider citing:
 }
 ```
 
-## Modifications in this repository
+## Modifications
 
 This repository is a fork of [ultralytics/yolov5](https://github.com/ultralytics/yolov5), with an implementation of alpha-IoU losses while keeping the code as close to the original as possible.
 
@@ -45,7 +45,7 @@ voc50.yaml # use randomly 50% PASCAL VOC as the training set
 Code for generating different small training sets is in [generate_small_sets.py](https://github.com/Jacobi93/Alpha-IoU/blob/main/generate_small_sets.py). Code for generating different noisy labels is in [generate_noisy_labels.py](https://github.com/Jacobi93/Alpha-IoU/blob/main/generate_noisy_labels.py), and we should change the 'img2label_paths' function in [utils/datasets.py](https://github.com/Jacobi93/Alpha-IoU/blob/main/utils/datasets.py) accordingly.
 
 
-## Train and evaluation commands
+## Implementation Commands
 
 For detailed installation instruction and network training options, please take a look at the README file or issue of [ultralytics/yolov5](https://github.com/ultralytics/yolov5). Following are sample commands we used for training and testing YOLOv5 with alpha-IoU, with more samples in [instruction.txt](https://github.com/Jacobi93/Alpha-IoU/blob/main/instruction.txt).
 
@@ -57,7 +57,7 @@ python detect.py --source ../VOC/images/detect500 --weights 'runs/train/voc_yolo
 
 We can also randomly generate some images for detection and visualization results in [generate_detect_images.py](https://github.com/Jacobi93/Alpha-IoU/blob/main/generate_detect_images.py).
 
-## Pretrained weights
+## Pretrained Weights
 
 Here are some pretrained models using the configurations in this repository, with alpha=3 in all experiments. Details of these pretrained models can be found in [runs/train](https://github.com/Jacobi93/Alpha-IoU/tree/main/runs/train). All results are tested using 'weights/best.pt' for each experiment. It is a very simple yet effective method so that people is able to quickly apply our method to existing models following the 'bbox_alpha_iou' function in [utils/general.py](https://github.com/Jacobi93/Alpha-IoU/blob/main/utils/general.py). Note that YOLOv5 has been updated for many versions and all pretrained models in this repository are obtained based on the [YOLOv5 version 4.0](https://github.com/ultralytics/yolov5/releases), where details of all versions for YOLOv5 can be found. Researchers are also welcome to apply our method to other models, e.g., Faster R-CNN, DETR, etc.
 
