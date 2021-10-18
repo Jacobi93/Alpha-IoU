@@ -1,6 +1,6 @@
 # Alpha-IoU: A Family of Power Intersection over Union Losses for Bounding Box Regression
 
-YOLOv5 with $\alpha$-IoU losses implemented in PyTorch
+YOLOv5 with alpha-IoU losses implemented in PyTorch
 
 If you use this work, please consider citing:
 
@@ -15,11 +15,11 @@ If you use this work, please consider citing:
 
 ## Modifications in this repository
 
-This repository is a fork of [ultralytics/yolov5](https://github.com/ultralytics/yolov5), with an implementation of $\alpha$-IoU losses while keeping the code as close to the original as possible.
+This repository is a fork of [ultralytics/yolov5](https://github.com/ultralytics/yolov5), with an implementation of alpha-IoU losses while keeping the code as close to the original as possible.
 
-### $\alpha$-IoU Losses
+### Alpha-IoU Losses
 
-$\alpha$-IoU losses can be configured in Line 131 of [utils/loss.py](), functionesd as 'bbox_alpha_iou'. The $\alpha$ values and types of losses (e.g., IoU, GIoU, DIoU, CIoU) can be selected in this function, which are detailed in [utils/general.py](). Note that we should use $\epsilon$ to avoid torch.pow(0, alpha) or denominator=0.
+Alpha-IoU losses can be configured in Line 131 of [utils/loss.py](), functionesd as 'bbox_alpha_iou'. The alpha values and types of losses (e.g., IoU, GIoU, DIoU, CIoU) can be selected in this function, which are detailed in [utils/general.py](). Note that we should use a small constant epsilon to avoid torch.pow(0, alpha) or denominator=0.
 
 ### Configurations
 
@@ -46,10 +46,10 @@ We can also randomly generate some images for detection and visualization result
 
 ## Pretrained weights
 
-Here are some pretrained models using the configurations in this repository, with $\alpha=3$ in all experiments. It is a very simple yet effective method so that people is able to quickly apply our method to existing models following the 'bbox_alpha_iou' function.
+Here are some pretrained models using the configurations in this repository, with alpha=3 in all experiments. It is a very simple yet effective method so that people is able to quickly apply our method to existing models following the 'bbox_alpha_iou' function.
 
- - [$\mathcal{L}_{\textrm{IoU}}$ for YOLOv5s on PASCAL VOC]()
- - [$\mathcal{L}_{\alpha \textrm{-IoU}}$ for YOLOv5s on PASCAL VOC]()
- - [$\mathcal{L}_{\textrm{DIoU}}$ for YOLOv5s on PASCAL VOC]()
- - [$\mathcal{L}_{\alpha \textrm{-DIoU}}$ for YOLOv5s on PASCAL VOC]()
+ - [The IoU loss for YOLOv5s on PASCAL VOC]()
+ - [The alpha-IoU loss for YOLOv5s on PASCAL VOC]()
+ - [The DIoU loss for YOLOv5s on PASCAL VOC]()
+ - [The alpha-DIoU loss for YOLOv5s on PASCAL VOC]()
 
