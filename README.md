@@ -33,6 +33,19 @@ This repository is a fork of [ultralytics/yolov5](https://github.com/ultralytics
 
 Alpha-IoU losses can be configured in Line 131 of [utils/loss.py](https://github.com/Jacobi93/Alpha-IoU/blob/main/utils/loss.py), functionesd as 'bbox_alpha_iou'. The alpha values and types of losses (e.g., IoU, GIoU, DIoU, CIoU) can be selected in this function, which are defined in [utils/general.py](https://github.com/Jacobi93/Alpha-IoU/blob/main/utils/general.py). Note that we should use a small constant epsilon to avoid torch.pow(0, alpha) or denominator=0.
 
+### Install
+
+[**Python>=3.6.0**](https://www.python.org/) is required with all
+[requirements.txt](https://github.com/Jacobi93/Alpha-IoU/blob/main/requirements.txt) installed including
+[**PyTorch>=1.7**](https://pytorch.org/get-started/locally/):
+<!-- $ sudo apt update && apt install -y libgl1-mesa-glx libsm6 libxext6 libxrender-dev -->
+
+```bash
+$ git clone https://github.com/Jacobi93/Alpha-IoU
+$ cd Alpha-IoU
+$ pip install -r requirements.txt
+```
+
 ### Configurations
 
 Configuration files can be found in [data](https://github.com/Jacobi93/Alpha-IoU/tree/main/data). We do not change either 'voc.yaml' or 'coco.yaml' used in the original repository. However, we could do more experiments. E.g.,
