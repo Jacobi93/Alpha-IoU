@@ -31,7 +31,7 @@ This repository is a fork of [ultralytics/yolov5](https://github.com/ultralytics
 
 ### Alpha-IoU Losses
 
-Alpha-IoU losses can be configured in Line 131 of [utils/loss.py](https://github.com/Jacobi93/Alpha-IoU/blob/main/utils/loss.py), functionesd as 'bbox_alpha_iou'. The alpha values and types of losses (e.g., IoU, GIoU, DIoU, CIoU) can be selected in this function, which are defined in [utils/general.py](https://github.com/Jacobi93/Alpha-IoU/blob/main/utils/general.py). Note that we should use a small constant epsilon to avoid torch.pow(0, alpha) or denominator=0.
+Alpha-IoU losses can be configured in Line 131 of [utils/loss.py](https://github.com/Jacobi93/Alpha-IoU/blob/main/utils/loss.py), functionesd as 'bbox_alpha_iou'. The alpha values and types of losses (e.g., IoU, GIoU, DIoU, CIoU) can be selected in this function, which are defined in [utils/general.py](https://github.com/Jacobi93/Alpha-IoU/blob/main/utils/general.py). Note that we should use a small constant epsilon to **avoid torch.pow(0, alpha) or denominator=0**.
 
 ### Install
 
