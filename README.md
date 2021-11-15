@@ -66,6 +66,7 @@ For detailed installation instruction and network training options, please take 
 python train.py --data voc.yaml --hyp hyp.scratch.yaml --cfg yolov5s.yaml --batch-size 64 --epochs 300 --device '0'
 python test.py --data voc.yaml --img 640 --conf 0.001 --weights 'runs/train/voc_yolov5s_iou/weights/best.pt' --device '0'
 python detect.py --source ../VOC/images/detect500 --weights 'runs/train/voc_yolov5s_iou/weights/best.pt' --conf 0.25
+python detect.py --source inference/images --weights 'runs/train/voc_yolov5s_iou/weights/best.pt' --conf 0.25
 ```
 
 We can also randomly generate some images for detection and visualization results in [generate_detect_images.py](https://github.com/Jacobi93/Alpha-IoU/blob/main/generate_detect_images.py).
